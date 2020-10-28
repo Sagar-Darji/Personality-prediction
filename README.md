@@ -15,6 +15,19 @@ Factor analysis has been used in the study of human intelligence and human perso
 - Provides support for theories that would be difficult to prove otherwise
 
 ## Algorithm
+```python
+Refine the Data
+Prepare the Data
+Choose the Factor
+  variable
+  correlation matrix
+  using any method of factor analysis such as EFA
+  Decide no. of factors
+  factor loading of factors
+  rotation of factor loadings
+  provide appropriate no. of factors
+  
+```
 
 ## Now understand and implement the code 
 > Import all libraries which we needed to perform this `python code`
