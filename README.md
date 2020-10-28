@@ -4,6 +4,8 @@
 ## Let's get started
 [![](https://img.shields.io/badge/author-@SagarDarji-blue.svg?style=flat)](https://www.linkedin.com/in/sagar-darji-7b7011165/)
 
+The system will predict one's personality and their traits through basic survey.This system will help the human resource to select right candidate for desired job profile, which in turn provide expert workforce for the organization.
+
 ### Applications in psychology:
 Factor analysis has been used in the study of human intelligence and human personality as a method for comparing the outcomes of (hopefully) objective tests and to construct matrices to define correlations between these outcomes, as well as finding the factors for these results. The field of psychology that measures human intelligence using quantitative testing in this way is known as psychometrics (psycho=mental, metrics=measurement). 
 
@@ -233,7 +235,7 @@ Why are we encoding the data?
 There is two type of encoding
 1. `Integer encoding`
 > each unique label is mapped to an integer.
-1. `One hot encoding`
+2. `One hot encoding`
 > It refers to splitting the column which contains numerical categorical data to many columns depending on the number of categories present in that column. Each column contains “0” or “1” corresponding to which column it has been placed.
 
 | Before Encoding | After Encoding |
@@ -580,7 +582,7 @@ There is two type of rotation
       ![png](Varimax.png)
   1. `quatimax`
   1. `equimax`
-1. Oblique rotation
+4. Oblique rotation
 > permit the factors to be correlated with one another often produces solution with a simpler structure.
 
 Here, Our data is uncorrelated so we have used Orthogonal's `varimax` rotation method.
@@ -627,6 +629,7 @@ AF = pd.DataFrame(AF)
 AF.index = df.columns
 AF
 ```
+> Out:
 <div>
 <table border="1" class="dataframe">
   <thead>
@@ -1110,7 +1113,7 @@ F.columns=["FACTOR","Variable","Varianza_Explica"]
 F = F.reset_index().drop(["index"],axis=1)
 F
 ```
-
+> Out:
 <div>
 <table border="1" class="dataframe">
   <thead>
@@ -1282,7 +1285,7 @@ F
 F = F.pivot(columns='FACTOR')["Variable"]
 F.apply(lambda x: pd.Series(x.dropna().to_numpy()))
 ```
-
+> Out:
 <div>
 <table border="1" class="dataframe">
   <thead>
@@ -1340,32 +1343,45 @@ F.apply(lambda x: pd.Series(x.dropna().to_numpy()))
 </table>
 </div>
 
+---
 
 FACTOR 1: Energy levels, Number of friends, Socializing...
 
 Could be: Extraversion
 
+---
+
 FACTOR 2: Self-ciricism, Fake, Loneliness...
 
 Looks very similar to "Neuroticism"
+
+---
 
 Factor 3: Thinking ahead, Prioritising workload...
 
 very similar to "Conscientiousness"
 
+---
+
 Factor 4: Children, God, Finding lost valuables
 
 This factor could be something like "religious" or "conservative", maybe have lowest scores of a "Openness" in Big Five model.
+
+---
 
 Factor 5: Appearence and gestures, Mood swings
 
 Mmmm it could be "Agreeableness". What do you think it could be represent?
 
+---
+
 ## Conclusion
-The first three Factors are very clear: Extraversion, Neuroticism and Conscientiousness. The other two not to much. Anyway is a very interesting approximation
+The first three Factors are very clear: Extraversion, Neuroticism and Conscientiousness. The other two not to much. Anyway is a very interesting approximation 
 
 Maybe doing first a PCA for remove hight correlate variables like "God" and "Final judgement"could help.
 
 What do you think?
 
-Thanks you!
+# Thank you      
+![png](Thank-you.png)                                       
+> I appreciate especially your `Heart`
