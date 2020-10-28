@@ -12,6 +12,8 @@ Factor analysis has been used in the study of human intelligence and human perso
 - Allows for a satisfactory comparison between the results of intelligence tests
 - Provides support for theories that would be difficult to prove otherwise
 
+## Algorithm
+
 ## Now understand and implement the code 
 > Import all library which we needed to perform this `python code`
 ```#Librerias
@@ -19,12 +21,17 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 ```
-
+Make Dataframe using `Pandas` and shaped it 
 ```
 #Data
 df = pd.read_csv("responses.csv")
 df.shape
 ```
+> Out: (1010, 15)
+
+In `response.csv` [1010 rows, 150 rows] 
+> Which means this data collected by surveying 1010 individuals and there is 150 types of different prefrence & fields.
+
 MUSIC PREFERENCES (19) 0:19
 
 MOVIE PREFERENCES (12) 19:31
@@ -41,7 +48,7 @@ SPENDING HABITS (7) 133:140
 
 DEMOGRAPHICS (10 ) 140:150
 
-We will take only: PERSONALITY TRAITS, VIEWS ON LIFE & OPINIONS (57) 76:133
+We will take only: PERSONALITY TRAITS, VIEWS ON LIFE & OPINIONS (57) `76:133`
 
 
 ```
@@ -49,6 +56,7 @@ df = df.iloc[:, 76:133]
 df.head(5)
 ```
 > Out:
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -203,9 +211,10 @@ df.head(5)
 </div>
 
 
-## 1. Prepare the Data
+# 1. Prepare the Data
 
-```#Drop NAs
+```python
+#Drop NAs
 df = df.dropna()
 #...............................................................................................
 #Encode categorical data
@@ -214,6 +223,30 @@ from sklearn.preprocessing import LabelEncoder
 df = df.apply(LabelEncoder().fit_transform)
 df
 ```
+
+`dropna()` method will remove Null value from dataframe.
+
+Why are we encoding the data?
+> In order to analys data require all i/p & o/p variable to be nummeric. This means that if our data contains categorical dat, we must encode it to number before you can fit and evalute a model.
+
+There is two type of encoding
+1. `Integer encoding`
+> each unique label is mapped to an integer.
+1. `One hot encoding`
+> It refers to splitting the column which contains numerical categorical data to many columns depending on the number of categories present in that column. Each column contains “0” or “1” corresponding to which column it has been placed.
+
+| Before Encoding | After Encoding |
+|--------|--------|
+| Height | Height |
+| Tall | 0 |
+| Short | 1 |
+| Medium | 2 |
+| Medium | 2 |
+| Short | 1 |
+| Tall | 0 |
+
+              
+
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
