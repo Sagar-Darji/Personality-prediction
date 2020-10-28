@@ -1,17 +1,30 @@
 # Personality-prediction
-From the given database Find out the personality using this personality traits. 
-Applications in psychology:
+> From the given database Find out the personality using this personality traits. 
 
+## Let's get started
+[![](https://img.shields.io/badge/author-@SagarDarji-blue.svg?style=flat)](www.linkedin.com/in/sagar-darji-7b7011165?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BMxOAgkrVTVyw0F4O977G1w%3D%3D)
+
+### Applications in psychology:
 Factor analysis has been used in the study of human intelligence and human personality as a method for comparing the outcomes of (hopefully) objective tests and to construct matrices to define correlations between these outcomes, as well as finding the factors for these results. The field of psychology that measures human intelligence using quantitative testing in this way is known as psychometrics (psycho=mental, metrics=measurement). 
 
-<h3>Advantages:</h3><br>1)Offers a much more objective method of testing traits such as intelligence in humans</br><br>2)Allows for a satisfactory comparison between the results of intelligence tests </br><br>3)Provides support for theories that would be difficult to prove otherwise</br>
+### Advantages:
+- Offers a much more objective method of testing traits such as intelligence in humans
+- Allows for a satisfactory comparison between the results of intelligence tests
+- Provides support for theories that would be difficult to prove otherwise
 
+## Now understand and implement the code 
+> Import all library which we needed to perform this `python code`
 ```#Librerias
 import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt
 ```
 
+```
+#Data
+df = pd.read_csv("responses.csv")
+df.shape
+```
 MUSIC PREFERENCES (19) 0:19
 
 MOVIE PREFERENCES (12) 19:31
@@ -30,11 +43,6 @@ DEMOGRAPHICS (10 ) 140:150
 
 We will take only: PERSONALITY TRAITS, VIEWS ON LIFE & OPINIONS (57) 76:133
 
-```
-#Data
-df = pd.read_csv("responses.csv")
-df.shape
-```
 
 ```
 df = df.iloc[:, 76:133]
