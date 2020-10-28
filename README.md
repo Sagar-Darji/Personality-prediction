@@ -1,8 +1,8 @@
 # Personality-prediction
-> From the given database Find out the personality using this personality traits. 
+> From the given database `response.csv` Find out the personality traits using this personality prediction project. 
 
 ## Let's get started
-[![](https://img.shields.io/badge/author-@SagarDarji-blue.svg?style=flat)](www.linkedin.com/in/sagar-darji-7b7011165?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BMxOAgkrVTVyw0F4O977G1w%3D%3D)
+[![](https://img.shields.io/badge/author-@SagarDarji-blue.svg?style=flat)](https://www.linkedin.com/in/sagar-darji-7b7011165/)
 
 ### Applications in psychology:
 Factor analysis has been used in the study of human intelligence and human personality as a method for comparing the outcomes of (hopefully) objective tests and to construct matrices to define correlations between these outcomes, as well as finding the factors for these results. The field of psychology that measures human intelligence using quantitative testing in this way is known as psychometrics (psycho=mental, metrics=measurement). 
